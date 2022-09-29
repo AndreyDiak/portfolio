@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { customColor } from '../pages'
 import { BackCircles } from './BackCircles'
@@ -9,10 +7,10 @@ type Props = {}
 
 export default function Hero({ }: Props) {
 
-  const [text] = useTypewriter({
+  const { text } = useTypewriter({
     words: [
       'Nice/to/meet/You.html',
-      'My_Name_Is_Andrey.css',
+      'MyNameIsAndrey.css',
       'Guy-who-loves-Tea.tsx',
       '<ButLovesToCodeMore />'
     ],
@@ -30,7 +28,7 @@ export default function Hero({ }: Props) {
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
-          Softwate Engineer
+          Software Engineer
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
           <span className='mr-3 font-mono'>{text}</span>
