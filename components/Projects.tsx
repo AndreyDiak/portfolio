@@ -1,11 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Project } from '../typings'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+  projects: Project[]
+}
 
-function Projects({}: Props) {
-
-  const projects = [1,2,3,4,5]
+function Projects({ projects }: Props) {
 
   return (
     <motion.div 
@@ -24,7 +26,7 @@ function Projects({}: Props) {
         snap-mandatory z-20 scrollbar-track-gray-400/20 
         scrollbar-thumb-amber-500/80 scrollbar-thin">
         {projects.map((project, index) => (
-          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5
+          <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5
           items-center justify-center p-20 md:p-44 h-screen">
             <motion.img 
             initial={{
@@ -34,7 +36,7 @@ function Projects({}: Props) {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, y: 0}}
             viewport={{ once: true}}
-            src="https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png" 
+            src={urlFor(project.image).width(1200).url()} 
             alt="" />
 
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
@@ -42,10 +44,12 @@ function Projects({}: Props) {
                 <span className="underline decoration-[#f7ab0a]/50">
                   Case study {index + 1} of {projects.length}:
                 </span>{' '}
-                Project Name
+                {project.title}
               </h4>
 
-              <p className="text-lg text-center md:text-left">There will be a project summary...</p>
+              <p className="text-lg text-center md:text-left">
+                {project.summary }
+              </p>
 
             </div>
 

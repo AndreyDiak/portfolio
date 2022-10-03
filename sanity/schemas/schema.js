@@ -6,13 +6,19 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import pageInfo from './pageInfo'
+import skill from './skill'
+import social from './social'
+import project from './project'
+import expirence from './experience'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
-  
     pageInfo,
-   
+    skill,
+    social,
+    project,
+    expirence
   ]),
 })

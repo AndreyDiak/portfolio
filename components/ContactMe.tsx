@@ -3,7 +3,12 @@ import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import { customColor } from '../pages'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
-type Props = {}
+type Props = {
+  email: string
+  phoneNumber: string
+  address: string
+}
+
 type Inputs = {
   name: string
   email: string
@@ -11,7 +16,7 @@ type Inputs = {
   message: string
 }
 
-function ContactMe({ }: Props) {
+function ContactMe({ email, phoneNumber, address }: Props) {
 
   const {
     register,
@@ -37,17 +42,17 @@ function ContactMe({ }: Props) {
         <div className="">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
-            <p className="text-2xl">+1234567890</p>
+            <p className="text-2xl">{phoneNumber}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
-            <p className="text-2xl">brodiaga_0880@mail.ru</p>
+            <p className="text-2xl">{email}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
-            <p className="text-2xl">Moscow</p>
+            <p className="text-2xl">{address}</p>
           </div>
         </div>
 

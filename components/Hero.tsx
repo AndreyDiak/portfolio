@@ -3,9 +3,12 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { customColor } from '../pages'
 import { BackCircles } from './BackCircles'
 
-type Props = {}
+type Props = {
+  role: string
+  image: string
+}
 
-export default function Hero({ }: Props) {
+export default function Hero({ role, image }: Props) {
 
   const { text } = useTypewriter({
     words: [
@@ -23,12 +26,12 @@ export default function Hero({ }: Props) {
       <BackCircles />
       <img
         className='relative rounded-full h-32 w-32 object-cover'
-        src="/me.jpg"
+        src={image}
         alt=""
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
-          Software Engineer
+          { role }
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
           <span className='mr-3 font-mono'>{text}</span>

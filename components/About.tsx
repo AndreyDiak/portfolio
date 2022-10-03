@@ -1,9 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { customColor } from '../pages'
-type Props = {}
 
-export default function About({ }: Props) {
+type Props = {
+  about: string
+}
+
+export default function About({ about }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -38,16 +41,7 @@ export default function About({ }: Props) {
           background
         </h4>
         <p className='text-base text-gray-200 font-mono'>
-          Привет! Меня зовут Андрей и я <span className='font-bold'>ВЕБ-РАЗРБОТЧИК!</span> 
-          Я учусь на 4 курсе в РТУ МИРЭА.
-          Я начал увлекаться компьютерными технологиями с 8 класса и с тех пор решил связать свою жизнь 
-          с <b>IT</b>.
-          В 11 классе я начал заниматься версткой простых сайтов и с тех пор имею за плечами не мало готовых 
-          макетов. Уже в университете я познакомился с <b>JavaScript</b>-фреймворками и решил выбрать <b>React</b>.
-          На изучение самого React-а у меня ушло около полугода после чего я стал делать свои пет-проекты
-          с использованием различных библиотек а так-же хранилищ данных, таких как MongoDB, SanityIo, FireBase
-          и SupaBase. Я не берусь утверждать, что обладаю всеми необходыми мне знаниями, но у меня есть желанию
-          развиваться и продолжать учится, а это, как по мне, самое главное!
+          { about }
         </p>
       </div>
     </motion.div>
