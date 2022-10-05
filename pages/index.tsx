@@ -1,11 +1,10 @@
-import type { GetStaticProps, NextPage } from 'next'
-import Head from 'next/head'
+import type { GetStaticProps } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect } from 'react';
 import About from '../components/About';
 import ContactMe from '../components/ContactMe';
-import Header from '../components/Header'
-import Hero from '../components/Hero'
+import Header from '../components/Header';
+import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import { urlFor } from '../sanity';
@@ -23,7 +22,6 @@ type Props = {
 
 const Home = ({ pageInfo, skills, projects, socials }: Props) => {
 
-  
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen 
     snap-y snap-mandatory overflow-x-hidden overflow-y-scroll z-0

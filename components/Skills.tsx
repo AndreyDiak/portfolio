@@ -1,11 +1,6 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import { Skill as SkillType } from '../typings'
-import SkillCircle from './Skill'
-import { url } from 'inspector'
-import { urlFor } from '../sanity'
 import Skill from './Skill'
-// import Skill fro./SkillCircleill'
 
 type Props = {
   skills: SkillType[]

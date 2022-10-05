@@ -1,10 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { groq } from 'next-sanity'
 import { sanityClient } from '../../sanity'
-import { PageInfo, Project, Skill, Social } from '../../typings'
+import { PageInfo } from '../../typings'
 
 const query = groq`
-*[_type=='pageInfo'][0]
+  *[_type=='pageInfo'][0]
 `
 
 type Data = {
@@ -19,3 +19,4 @@ export default async function handler(
 
   res.status(200).json({ pageInfo })
 }
+  

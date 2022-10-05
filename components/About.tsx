@@ -1,6 +1,4 @@
-import React from 'react'
 import { motion } from 'framer-motion'
-import { customColor } from '../pages'
 
 type Props = {
   about: string

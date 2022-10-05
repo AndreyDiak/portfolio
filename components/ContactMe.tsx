@@ -1,7 +1,5 @@
-import React from 'react'
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid'
-import { customColor } from '../pages'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import { SubmitHandler, useForm } from 'react-hook-form'
 
 type Props = {
   email: string
