@@ -1,3 +1,4 @@
+'use client'
 import { motion } from 'framer-motion'
 
 type Props = {
@@ -38,9 +39,9 @@ export default function About({ about }: Props) {
           <span className={`underline decoration-[#f7ab0a]/50`}>little</span>{' '}
           background
         </h4>
-        <p className='text-base text-gray-200 font-mono'>
+        <h6 className='text-base text-gray-200 font-mono'>
           { about }
-        </p>
+        </h6>
       </div>
     </motion.div>
   )

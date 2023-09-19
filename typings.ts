@@ -39,13 +39,14 @@ export interface Experience extends SanityBody {
   isCurrentlyWorkingHere: boolean
   jobTitle: string
   points: string[]
+  companyImage?: Image
   technologies: Skill[]
 }
 
 export interface Skill extends SanityBody {
   _type: 'skill'
   image: Image
-  progress: numver
+  progress: number
   Title: string
 }
 
