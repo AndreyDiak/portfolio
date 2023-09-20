@@ -28,9 +28,9 @@ function ContactMe({ email, phoneNumber, address }: Props) {
          <h4 className="sectionTitle">Contact</h4>
 
          <div className="flex flex-col space-y-10">
-            <h4 className="flex flex-col md:flex-row text-2xl md:text-4xl font-semibold text-center">
-               I have got just what you need.{' '}
-               <div className={`underline decoration-[#f7ab0a]/50`}>Lets talk</div>
+            <h4 className="flex flex-col space-x-0 md:space-x-2 md:flex-row text-2xl md:text-4xl font-semibold text-center">
+               <h2>I have got just what you need.</h2>
+               <p className={`underline decoration-[#f7ab0a]/50`}>Lets talk</p>
             </h4>
 
             <div className="flex justify-center">

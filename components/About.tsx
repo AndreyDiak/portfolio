@@ -26,7 +26,7 @@ export default function About({ about }: Props) {
             viewport={{ once: false }}
             src="/about.png"
             alt=""
-            className="-mb-20 md:mb-0 flex-shrink-0 w-24 h-24 sm:w-48 sm:h-48 rounded-full object-cover
+            className="-mb-20 hidden sm:block md:mb-0 flex-shrink-0 w-24 h-24 sm:w-48 sm:h-48 rounded-full object-cover
         md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[700px]"
          />
 

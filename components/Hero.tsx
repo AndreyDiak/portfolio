@@ -36,7 +36,7 @@ export default function Hero({ role, image }: Props) {
          
          <div className="z-20">
             <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[5px] md:tracking-[15px]">{role}</h2>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold px-10">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold px-10">
                <span className="mr-3 font-mono">{text}</span>
                {/* @ts-ignore */}
                <Cursor cursorColor={customColor} />
