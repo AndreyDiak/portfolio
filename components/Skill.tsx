@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Skill } from '../typings';
@@ -9,16 +10,11 @@ type Props = {
 };
 
 function Skill({ directionLeft, skill }: Props) {
-   // By default mobile device...
-   const windowWidth = window?.innerWidth ?? 767;
-
-   const animationStartPos = windowWidth > 767 ? 200 : 100;
-
    return (
       <div className="group relative flex cursor-pointer">
          <motion.img
             initial={{
-               x: directionLeft ? -animationStartPos : animationStartPos,
+               x: directionLeft ? -100 : 100,
                opacity: 0,
             }}
             transition={{ duration: 1 }}

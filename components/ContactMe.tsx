@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
@@ -17,9 +17,6 @@ type Inputs = {
 
 function ContactMe({ email, phoneNumber, address }: Props) {
    const { register, handleSubmit } = useForm<Inputs>();
-
-   // By default mobile device...
-   const isMobile = window?.innerWidth ?? 767 > 767;
 
    const onSubmit: SubmitHandler<Inputs> = (formData) => {
       window.location.href = `mailto:brodiaga_0880@mail.ru?subject=${formData.subject}
