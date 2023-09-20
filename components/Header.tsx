@@ -13,7 +13,7 @@ type Props = {
 function Header({ socials }: Props) {
    return (
       <header
-         className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto
+         className="sticky top-0 p-2 md:p-5 flex justify-between max-w-7xl mx-auto
     z-20 xl:items-center"
       >
          <motion.div
@@ -52,10 +52,10 @@ function Header({ socials }: Props) {
             transition={{
                duration: 1.2,
             }}
-            className="cursor-pointer group"
+            className="cursor-pointer group flex items-center"
          >
             <Link href="#contact" className="flex space-x-2 items-center">
-               <InboxIcon className={`h-7 w-7`} color="gray" />
+               <InboxIcon className={`h-9 w-9`} color="gray" />
                <p className="uppercase hidden md:inline-flex text-sm text-gray-400 group-hover:text-gray-300">
                   Get In Touch
                </p>

@@ -18,47 +18,49 @@ type Inputs = {
 function ContactMe({ email, phoneNumber, address }: Props) {
    const { register, handleSubmit } = useForm<Inputs>();
 
+   // By default mobile device...
+   const isMobile = window?.innerWidth ?? 767 > 767;
+
    const onSubmit: SubmitHandler<Inputs> = (formData) => {
       window.location.href = `mailto:brodiaga_0880@mail.ru?subject=${formData.subject}
     &body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
    };
 
    return (
-      <div
-         className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10
-    justify-evenly mx-auto items-center"
-      >
+      <div className="sectionContainer md:text-left md:flex-row max-w-7xl">
          <h4 className="sectionTitle">Contact</h4>
 
          <div className="flex flex-col space-y-10">
-            <h4 className="text-4xl font-semibold text-center">
+            <h4 className="flex flex-col md:flex-row text-2xl md:text-4xl font-semibold text-center">
                I have got just what you need.{' '}
-               <span className={`underline decoration-[#f7ab0a]/50`}>Lets talk</span>
+               <div className={`underline decoration-[#f7ab0a]/50`}>Lets talk</div>
             </h4>
 
-            <div className="">
-               <div className="flex items-center space-x-5 justify-center">
-                  <PhoneIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
-                  <p className="text-2xl">{phoneNumber}</p>
-               </div>
+            <div className="flex justify-center">
+               <div>
+                  <div className="flex items-center  space-x-5 justify-start md:justify-center">
+                     <PhoneIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
+                     <p className="text-2xl">{phoneNumber}</p>
+                  </div>
 
-               <div className="flex items-center space-x-5 justify-center">
-                  <EnvelopeIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
-                  <p className="text-2xl">{email}</p>
-               </div>
+                  <div className="flex items-center space-x-5 justify-start md:justify-center">
+                     <EnvelopeIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
+                     <p className="text-2xl">{email}</p>
+                  </div>
 
-               <div className="flex items-center space-x-5 justify-center">
-                  <MapPinIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
-                  <p className="text-2xl">{address}</p>
+                  <div className="flex items-center  space-x-5 justify-start md:justify-center">
+                     <MapPinIcon className={`text-[#f7ab0a] h-7 w-7 animate-pulse`} />
+                     <p className="text-2xl">{address}</p>
+                  </div>
                </div>
             </div>
 
             <form
                onSubmit={handleSubmit(onSubmit)}
                action=""
-               className="flex flex-col w-fit space-y-2 mx-auto"
+               className="flex flex-col space-y-2 px-10 md:w-full"
             >
-               <div className="flex space-x-2">
+               <div className="flex space-x-0 md:space-x-2 space-y-2 md:space-y-0 flex-col md:flex-row">
                   <input
                      {...register('name')}
                      placeholder="Name"
