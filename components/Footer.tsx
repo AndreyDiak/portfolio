@@ -7,7 +7,7 @@ import { urlFor } from '../sanity';
 function Footer({ image }: { image: ImageType }) {
    return (
       <Link href="#hero">
-         <footer className="sticky bottom-24 w-full cursor-pointer">
+         <footer className="sticky w-full cursor-pointer bottom-[12.5%] md:bottom-[5%]">
             <div className="flex items-center justify-center">
                <Image
                   width={50}
